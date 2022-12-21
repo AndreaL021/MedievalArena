@@ -1,0 +1,33 @@
+body {
+    background-color: #c3c3c3;
+}
+canvas {
+    width: 90%;
+    background-color: rgb(5, 26, 32);
+    background-size: contain;
+    background-position: center;
+}
+
+button {
+    width: 6rem;
+    height: 2rem;
+    background-color: rgb(89, 148, 0);
+    font-weight: bold;
+    font-size: large;
+    color: red;
+    border-radius: 30px;
+}
+.start{
+    position: absolute;
+    z-index: 10;
+    top: 200;
+}
+button:hover {
+    cursor: pointer;
+}
+
+button:hover.start {
+    background-color: red;
+    color: rgb(89, 148, 0);
+    transition: all, 0.2s;
+}
