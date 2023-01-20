@@ -9,18 +9,26 @@
     <title>MyGame</title>
 </head>
 <body>
-    <div align="center">
+    <div id="container" align="center">
         <canvas id="canvas" width="1500" height="700">
           Your browser does not support the HTML5 canvas tag.
         </canvas>
     </div>
     <div align="center">
-        <button id="start">Start</button>
+        <button class="start" id="start">Start</button><br>
+        <button id="fullscreen">Fullscreen</button>
     </div>
-    <button class="start">Start</button>
-
+        <div class="attack">
+            <button>lanciafiamme</button><br>
+            <button>watergun</button><br>
+            <button>cerbottana</button><br>
+            <button>wunderwaffe</button><br>
+            <button>assorbipugno</button>
+        </div>
+</body>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.2/screenfull.min.js"></script>
 <!-- My JavaScript -->
 <script type="module" src="main2.js"></script>
 

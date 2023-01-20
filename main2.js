@@ -1,6 +1,12 @@
 import * as classes from "./class.js";
+import screenfull from './node_modules/screenfull/index.js';
 window.onload=()=>{
     var canvas = document.getElementById("canvas");
+    canvas.addEventListener("click", function(event) {
+        var cx = event.offsetX;
+        var cy = event.offsetY;
+        console.log("X: " + x + ", Y: " + y);
+      });
     var context = canvas.getContext("2d");
     var start = document.getElementById('start');
     // start.style.display = "none";
@@ -223,11 +229,20 @@ console.log([player, nemico1]);
             animation = window.requestAnimationFrame(draw);
         }
     }
-    var test;
+    
+    var button = document.getElementById("fullscreen");
+ 
+    button.addEventListener("click", function() {
+      if (screenfull.isEnabled) {
+        if (screenful.isFullscreen) 
+            screenfull.exit();
+        else
+        screenfull.request();
+      }
+    });
     function frames() {
         fpsSpan = fps;
     }
-    
     //Function to get the mouse position
     function getMousePos(canvas, event) {
         var rect = canvas.getBoundingClientRect();
